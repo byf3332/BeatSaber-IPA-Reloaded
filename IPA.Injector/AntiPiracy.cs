@@ -44,9 +44,7 @@ namespace IPA.Injector
         {
             var fileName = Path.GetFileName(filePath);
             var extension = Path.GetExtension(filePath);
-            return extension.Equals(".url", StringComparison.OrdinalIgnoreCase) ||
-                   extension.Equals(".ini", StringComparison.OrdinalIgnoreCase) && fileName != "desktop.ini" ||
-                   fileName.IndexOf("steam", StringComparison.OrdinalIgnoreCase) >= 0 && new FileInfo(filePath).Length >= 300 * 1024;
+            return false;
         }
 
         private static string GetPath(Guid guid, KnownFolderFlags flags)
