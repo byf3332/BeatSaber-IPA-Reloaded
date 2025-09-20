@@ -1,12 +1,6 @@
 name: Build
 
 on:
-  push:
-    branches-ignore:
-      - gh-pages
-  pull_request:
-    branches:
-      - master
   workflow_dispatch:
 
 defaults:
@@ -53,4 +47,5 @@ jobs:
         with:
           name: BSIPA-net472-${{ env.Platform }}
           path: BSIPA-Meta/bin/${{ env.Platform }}/${{ env.Configuration }}/net472/
+
 
